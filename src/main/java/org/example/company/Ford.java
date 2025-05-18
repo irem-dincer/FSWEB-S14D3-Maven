@@ -5,19 +5,22 @@ public class Ford extends Car{
         super(cylinders,name);
     }
 
+    @Override
+    public String brake() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " is braking!";
+    }
 
     @Override
-    public void  startEngine(){
-        System.out.println("Ford -> the car's engine is starting");
-        System.out.println(getClass().getSimpleName());
-    }
-    public void accelerate(){
-        System.out.println("Ford -> the car is accelerating");
-        System.out.println(getClass().getSimpleName());
-    }
-    public void brake(){
-        System.out.println("Ford -> the car is braking");
-        System.out.println(getClass().getSimpleName());
+    public String accelerate() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " is accelerating!";
     }
 
+    @Override
+    public String startEngine() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " engine is starting!";
+    }
 }
+

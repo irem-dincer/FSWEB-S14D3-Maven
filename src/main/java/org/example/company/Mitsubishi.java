@@ -6,17 +6,21 @@ public class Mitsubishi extends Car{
     }
 
     @Override
-    public void  startEngine(){
-        System.out.println("Mitsubishi -> the car's engine is starting");
-        System.out.println(getClass().getSimpleName());
+    public String brake() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " is braking!";
     }
-    public void accelerate(){
-        System.out.println("Mitsubishi -> the car is accelerating");
-        System.out.println(getClass().getSimpleName());
+
+    @Override
+    public String accelerate() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " is accelerating!";
     }
-    public void brake(){
-        System.out.println("Mitsubishi -> the car is braking");
-        System.out.println(getClass().getSimpleName());
+
+    @Override
+    public String startEngine() {
+        System.out.println("Class Name: " + getClass().getSimpleName());
+        return getName()+ " engine is starting!";
     }
 
 }
